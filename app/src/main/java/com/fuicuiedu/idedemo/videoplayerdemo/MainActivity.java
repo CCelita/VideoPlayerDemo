@@ -16,6 +16,8 @@ import com.fuicuiedu.idedemo.videoplayerdemo.DemoD.DemoDactivity;
 import com.fuicuiedu.idedemo.videoplayerdemo.DemoE.DemoEactivity;
 import com.fuicuiedu.idedemo.videoplayerdemo.DemoF.DemoFactivity;
 
+import io.vov.vitamio.Vitamio;
+
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     private ListView mLv;
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Vitamio.isInitialized(this);//重要！
 
         mLv = (ListView) findViewById(R.id.main_lv);
 
